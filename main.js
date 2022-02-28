@@ -10,7 +10,7 @@ recognition.onresult = function (event) {
     console.log(event);
     var content = event.results[0][0].transcript;
     document.getElementById("textInput_1").value = content;
-    if (content == "Selfie.") {
+    if (content == "Selfie." || content=="selfie") {
         Webcam.attach("#webcam");
         speak();
     }
